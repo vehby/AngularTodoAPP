@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; 
+    background-color:dedede!important;
+    background-image: url(https://cdn.wallpaperhub.app/cloudcache/7/4/f/3/d/5/74f3d51cbec9db78da32e103de1b28538af1b76a.jpg);
+    background-position: center;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
@@ -12,9 +16,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             .svg {
             width: 200px;
             }
-            span {
-                color: purple;
-            }
+          
+        }
+        span {
+            color: white;
+      
         }
     }
+}
+
+.mat-form-field {
+    width: 84%;
 }

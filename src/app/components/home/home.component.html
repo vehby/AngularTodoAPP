@@ -1,19 +1,20 @@
 <div class="page home">
-  <div class="container">
+  <div class="container mt-4">
     <div class="row">
       <div class="col-md-6 page-title">
         <h2>
-          <!-- <img src="assets/img/todo-logo.svg" width="40px;" alt=""> -->
+          <img src="https://image.flaticon.com/icons/svg/1617/1617767.svg" width="40px;" alt="" class="mr-3">
           <span>Todo List APP</span>
+
         </h2>
 
       </div>
       <div class="col-md-6">
         <form class="example-form">
           <mat-form-field class="example-full-width">
-            <input matInput value="" placeholder="Deneme yazı" #newTodo>
+            <input matInput value="" placeholder="Yeni iş ekle" #newTodo>
           </mat-form-field>
-          <button mat-button mat-raised-button color="primary" type='button' (click)="addTodo(newTodo)" >Ekle +</button>
+          <button mat-button mat-raised-button color="primary" type='submit' (click)="addTodo(newTodo)" >Ekle +</button>
         </form>
 
       </div>
@@ -21,19 +22,19 @@
   </div>
   <div class="container">
       <div class="row">
-        <div class="col-md-12">
-            <mat-card class="d-flex">
+        <div class="col-md-12 ">
+            <mat-card class="d-flex mainbox p-4">
                 <div class="example-container">
                     <h5>Bekleyenler</h5>
                     <div
                       cdkDropList
                       #pendingList="cdkDropList"
-                      [cdkDropListData]="pendings"
+                      [cdkDropListData]="data.pendings"
                       [cdkDropListConnectedTo]="[inProgressList]"
                       class="example-list"
                       (cdkDropListDropped)="drop($event)">
-                      <div class="example-box" *ngFor="let item of pendings" cdkDrag>
-                          <mat-icon aria-hidden="false" aria-label="Example home icon" class="mr-2">update</mat-icon>
+                      <div class="example-box" *ngFor="let item of data.pendings" cdkDrag>
+                        <img src="https://image.flaticon.com/icons/svg/148/148937.svg" width="25" class="mr-2" alt="">
                           {{item}}</div>
                     </div>
                   </div>
@@ -43,12 +44,12 @@
                       <div
                         cdkDropList
                         #inProgressList="cdkDropList"
-                        [cdkDropListData]="inProgress"
+                        [cdkDropListData]="data.inProgress"
                         [cdkDropListConnectedTo]="[pendingList,doneList]"
                         class="example-list"
                         (cdkDropListDropped)="drop($event)">
-                        <div class="example-box" *ngFor="let item of inProgress" cdkDrag>
-                            <mat-icon aria-hidden="false" aria-label="Example home icon" class="mr-2">snooze</mat-icon>
+                        <div class="example-box" *ngFor="let item of data.inProgress" cdkDrag>
+                          <img src="https://image.flaticon.com/icons/svg/747/747112.svg" width="25" class="mr-2" alt="">
                           {{item}}</div>
                       </div>
                     </div>
@@ -58,17 +59,15 @@
                         <div
                           cdkDropList
                           #doneList="cdkDropList"
-                          [cdkDropListData]="done"
+                          [cdkDropListData]="data.done"
                           [cdkDropListConnectedTo]="[inProgressList]"
                           class="example-list"
                           (cdkDropListDropped)="drop($event)">
-                          <div class="example-box" *ngFor="let item of done" cdkDrag>
-                              <mat-icon aria-hidden="false" aria-label="Example home icon" class="mr-2" >check_circle_outline</mat-icon>
+                          <div class="example-box" *ngFor="let item of data.done" cdkDrag>
+                            <img src="https://image.flaticon.com/icons/svg/2620/2620818.svg" width="25" class="mr-2" alt="">
                               {{item}}</div>
                         </div>
                       </div>
-                  
-                  
             </mat-card>
         </div>
       </div>

@@ -1,5 +1,7 @@
 # TodoAPP
 
+<img src="https://i.imgur.com/G0SXmD5.png" width="100%" alt="">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Development server

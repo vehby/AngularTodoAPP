@@ -1,6 +1,6 @@
 # TodoAPP
 
-<img src="https://i.ibb.co/CWMy891/Screen-Shot-2020-03-02-at-09-53-19.png" width="100%" alt="">
+<img src="https://i.imgur.com/G0SXmD5.png" width="100%" alt="">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
